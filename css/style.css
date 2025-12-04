@@ -1,0 +1,6 @@
+body.light { background:#fff; color:#000; }
+body.dark  { background:#111; color:#fff; }
+
+nav a { margin-right:15px; color:inherit; }
+button,input,textarea,select { padding:6px; margin-top:5px; }
+table { width:100%; margin-top:15px; }
