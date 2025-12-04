@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expense</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main  CSS File -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+
+
+</head>
+<body>
+   
+    
+        <div class="content">
+            <!-- start sidebar -->  
+        <div class="sidebar">
+            
+            <div class="logo">
+                <h2><i class="fa-solid fa-circle-info"></i>
+                    ExTracker</h2>
+            </div>
+    <div class="links">
+            <ul >
+    
+                <li class="active"> <a href="index.html" > <i class="fa-solid fa-house"></i>
+                    Home</a> </li>
+                <li><a href="expense.html"><i class="fa-solid fa-receipt"></i>
+                    Expense</a></li>
+                <li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i>
+                     History</a></li>
+                <li><a href="setting.html"><i class="fa-solid fa-gear"></i>
+                    Settings</a></li>
+            </ul>
+    </div>
+            <div class="user-profile">
+               <img src="image/cb2a1c74.jpg">
+                <div class="user-info">
+                    <p>User / Student</p>
+                    <span>Admin View</span>
+            </div>
+            </div>
+        </div>
+        <!-- end sidebar -->
+       <!-- start section -->
+        <div class="section">
+  <div class="main-content">
+    
+        <div class="top-header">
+        <h1>Financial control Dashboard</h1>
+        <p>Welcome A quick overview of your expense</p></div> 
+    
+                   <div class="display">
+      <i class="fa-solid fa-calculator"></i>
+    </div>
+
+
+   
+</div>
+<!-- end section -->
+ <!-- start stats card -->
+<div class="stats-cards">
+                
+        <div class="card">
+            <h5> Available Budget </h5>
+            <p>3,000 EGP</p>
+            <div class="line-green">
+              <span></span></div> </div>
+
+        <div class="card">
+            <h5>Total Expenses</h5>
+            <p>1,250 EGP</p> <div class="line-red"> <span></span>
+        
+        </div>
+</div>
+    
+<!-- end card -->
+ <!-- start add -->
+ 
+<div class="mini-form">
+    <div class="text">
+ <i class="fa-solid fa-circle-plus"></i>
+        <h3>Add Expense</h3></div>
+        <div class="input-icon">
+        <i class="fa-solid fa-pen"></i>
+
+        <input type="text" placeholder="Expense Name" class="small-input">
+        </div>
+        <div class="input-icon">
+   <i class="fa-solid fa-list-ol"></i>
+
+        <input type="number" placeholder="Amount" class="small-input" >
+        </div>
+        <select class="small-input">
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Shopping</option>
+               <option>add new catagory</option>
+        </select>
+        <div class="input-iconn">
+    <input type="text" placeholder="Enter the category you want"></div>
+       
+    
+        <button class="small-btn">Save</button>
+ 
+</div></div>
+<!-- end add -->
+
+<!-- start analysis -->
+<div class="analysis-card">
+    
+        <h3>Expense Analysis</h3>
+    <div class="pie-chart"></div>
+       <div class="point">
+          <div class="green" > <p>food</p></div>
+            <div class="blue" >  <p>transport</p></div>
+            <div class="red" >  <p>shopping</p></div>
+           <div class="gray" >   <p>other catagory</p></div>
+          </div>
+    </div>
+    <!-- end analysis -->
+     <!-- start -->
+      <div class="tra-calc">
+
+     <div class="transactions">
+     <div class="title">   <h3><i class="fa-solid fa-list-ul"></i>
+            Recent Transactions</h3></div>
+           <div class="recent">
+        <div class="Category">    <span>Category</span></div>
+           <div class="amout"> <span>Amount</span> <div></div></div>
+           <div class="atatus"> <span>Status</span></div></div> 
+          
+     </div>
+
+      <!-- end -->
+       <!--start calc -->
+
+       <div class="calculator-box">
+        <div class="calc-header">Calculator</div>
+        <input type="text" id="calc-screen" value="0" disabled>
+    
+        <div class="calc-keys">
+            
+            <button class="btn-red">DEL</button>
+            <button class="btn-red span-two" ><i class="fa-solid fa-delete-left"></i>
+</button>
+        
+            <button class="btn-op">÷</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+    <button class="btn-op">×</button>
+            
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+     <button class="btn-op">+</button>
+        
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+     <button class="btn-op">-</button>
+            <button>0</button>
+            <button>.</button>
+             <button class="btn-green span-two">=</button>
+        </div>
+    </div>
+</div>
+       <!-- end calc -->
+ </div>
+        </div>
+
+
+</body>
+</html>
