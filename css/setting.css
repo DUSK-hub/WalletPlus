@@ -2,15 +2,12 @@
     body{
         height: 130vh;
     }
-    .content ,.sidebar{
-        height: 800px;
-    }
 
     .Setting{
-    padding-left: 40px;
-        background-color: rgba(40, 7, 50, 0.559);
-width: 500px;
-border-radius: 0 20px 20px 0;
+        padding-left: 40px;
+        background-color: rgba(230, 233, 236, 0.29);
+        width: 100%;
+        border-radius: 0 20px 20px 0;
     }
     .Setting h1 {
 font-size: 23px;
