@@ -21,76 +21,78 @@
 </style>
 </head>
 <body>
-   
-    
         <div class="content">
             <!-- start sidebar -->
-        <div class="sidebar">
-            
+                <!-- Sidebar -->
+        <aside class="sidebar">
             <div class="logo">
-                <h2><i class="fa-solid fa-circle-info"></i>
-                    ExTracker</h2>
+                <h2>
+                    <i class="fa-solid fa-circle-info"></i>
+                    ExTracker
+                </h2>
             </div>
-    <div class="links">
-            <ul >
-                <li class="active"> <a href="index.html" > <i class="fa-solid fa-house"></i>
-                    Home</a> </li>
-                <li><a href="expense.html"><i class="fa-solid fa-receipt"></i>
-                    Expense</a></li>
-                <li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i>
-                     History</a></li>
-                <li><a href="setting.html"><i class="fa-solid fa-gear"></i>
-                    Settings</a></li>
-            </ul>
-    </div>
+            
+            <nav class="links">
+                <a href="index.html" class="links-nav">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="expense.html" class="links-nav">
+                    <i class="fa-solid fa-receipt"></i>
+                    <span>Expense</span>
+                </a>
+                <a href="history.html" class="links-nav">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>History</span>
+                </a>
+                <a href="setting.html" class="links-nav">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
             <div class="user-profile">
-               <img src="image/cb2a1c74.jpg">
+                <img src="image/cb2a1c74.jpg" alt="User Avatar">
                 <div class="user-info">
                     <p>User / Student</p>
                     <span>Admin View</span>
+                </div>
             </div>
-            </div>
-        </div>
-        <!--  start setting -->
-<div class="Setting">
+        </aside>
     
-    <h1>Setting</h1>
-    <div class="text">
-   <div class="textt"> <h4>Account information <p>set your personal information</p> </h4>
-   </div> <h4>update Cards<p>update you cards</p></h4>
+        <!--  start setting -->
+    <div class="Setting">
+        
+        <h1>Setting</h1>
+        <div class="text">
+    <div class="textt"> <h4>Account information <p>set your personal information</p> </h4>
+    </div> <h4>update Cards<p>update you cards</p></h4>
 
-</div>
-
-<div class="name">
-    <img src="image/cb2a1c74.jpg">
-    <div class="username">
-        <label>First Name</label>
-        <input type="text"placeholder="user-name" required >
-        <label>Data of Birth</label>
-        <input type="date">
-        <label>Mobile Number</label>
-        <input type="num" placeholder="numder">
-        <button>Save</button>
     </div>
-</div>
-<div class="pass">
-    <div class="textpass">
-        <h1>Password</h1>
-        <p>set your security pin </p>
-    </div>
-    <label>Current Password</label>
-    <input type="password" placeholder="enter pass" required minlength="8">
-    <button>
-        update
-    </button>
-</div>
 
-
-
-
-
-
-</div>
+    <div class="name">
+        <img src="image/cb2a1c74.jpg">
+        <div class="username">
+            <label>First Name</label>
+            <input type="text"placeholder="user-name" required >
+            <label>Data of Birth</label>
+            <input type="date">
+            <label>Mobile Number</label>
+            <input type="num" placeholder="numder">
+            <button>Save</button>
         </div>
-        <!-- end sidebar -->
-</body></html>
+    </div>
+        <div class="pass">
+            <div class="textpass">
+                <h1>Password</h1>
+                <p>set your security pin </p>
+            </div>
+            <label>Current Password</label>
+            <input type="password" placeholder="enter pass" required minlength="8">
+            <button>update</button>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

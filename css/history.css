@@ -1,160 +1,29 @@
 
-    body{
-        height: 130vh;
-    }
-    .history{
-        position: relative;
-         padding-left: 20px;
-        background-color: rgba(230, 233, 236, 0.29);
-width: 400px;
-border-radius: 0 20px 20px 0;
-    }
+body{
+    height: 100vh;
+}
+.history{
+    position: relative;
+    padding-left: 20px;
+    background-color: rgba(230, 233, 236, 0.29);
+    width: 100%;
+    border-radius: 0 20px 20px 0;
+}
 .history h1{
     font-size: 30px;
 }
 .button button ,.button select{
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid white;
-height: 40px;
-
+    height: 40px;
+    width: 120px;
+    
 }
-.analysis{
-  margin-top: 200px;
-  margin-right: 20px;
-}
-.analysis-card{
-    margin-left:var(--margin-left) ;
-    border-radius: 20px;
-    background-color: var(--main-color);
-    width:100% ;
-    height: 290px;
-   position: relative;
-
-}
-.analysis-card h3{
-   padding: 13px 0 0 20px;
-}
-        .pie-chart {
-         
-            position: absolute;
-            width: 180px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px; 
-         margin-left: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
-            
-        
-     background: conic-gradient(
-    var(--red-color) 0deg 162deg,
-    var(--blue-color) 162deg 270deg,
-    var(--green-color) 270deg 342deg,
-    var(--grey-color) 342deg 360deg
-);}
-.point{
+.button{
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
-    /* justify-content: flex-end; */
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: 30px;
-}
-    .point p{
-        font-size: 12px;
-        padding-bottom:0px;
-
-    }
-.red {
-    position: relative;
-    padding-left: 20px; 
-}
-
-.red::before {
-    content: "";
-    position: absolute;
-    left:0;
-    top: 50%;             
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 50%;   
- 
-}
-.green {
-    position: relative;
-    padding-left: 20px; 
-}
-
-.green::before {
-    content: "";
-    position: absolute;
-    left:0;
-    top: 50%;             
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: rgb(61, 135, 83);
-    border-radius: 50%;   
- 
-}
-.blue {
-    position: relative;
-    padding-left: 20px; 
-}
-
-.blue::before {
-    content: "";
-    position: absolute;
-    left:0;
-    top: 50%;             
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: rgb(15, 155, 255);
-    border-radius: 50%;   
- 
-}
-.gray{
-    position: relative;
-    padding-left: 20px; 
-}
-
-.gray::before {
-    content: "";
-    position: absolute;
-    left:0;
-    top: 50%;             
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: rgb(128, 122, 122);
-    border-radius: 50%;   
- 
-}
-.transactions{
-background-color: var(--main-color);
-margin-top:10px ;
-height:240px;
-width: 95%;  
-margin-right: 20px;
-border-radius:20px;
-margin-left: var(--margin-left);
-}
-.title{
-
-padding:8px 0  0 9px
-
-}
-.title i{
-    font-size: 13px;
-    color:rgba(128, 128, 128, 0.348);
-}
-.transactions span{
-
-padding-left: 50px;
-}
-.recent{
-    display: flex;
+    gap: 20px;
 }
 
 @media (max-width: 880px) {

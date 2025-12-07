@@ -22,66 +22,80 @@
 
 </head>
 <body>
-   
-    
         <div class="content">
             <!-- start sidebar -->
-        <div class="sidebar">
-            
+                <!-- Sidebar -->
+        <aside class="sidebar">
             <div class="logo">
-                <h2><i class="fa-solid fa-circle-info"></i>
-                    ExTracker</h2>
+                <h2>
+                    <i class="fa-solid fa-circle-info"></i>
+                    ExTracker
+                </h2>
             </div>
-    <div class="links">
-            <ul >
-                <li class="active"> <a href="index.html" > <i class="fa-solid fa-house"></i>
-                    Home</a> </li>
-                <li><a href="expense.html"><i class="fa-solid fa-receipt"></i>
-                    Expense</a></li>
-                <li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i>
-                     History</a></li>
-                <li><a href="setting.html"><i class="fa-solid fa-gear"></i>
-                    Settings</a></li>
-            </ul>
-    </div>
+            
+            <nav class="links">
+                <a href="index.html" class="links-nav">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="expense.html" class="links-nav">
+                    <i class="fa-solid fa-receipt"></i>
+                    <span>Expense</span>
+                </a>
+                <a href="history.html" class="links-nav">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>History</span>
+                </a>
+                <a href="setting.html" class="links-nav">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
             <div class="user-profile">
-               <img src="image/cb2a1c74.jpg">
+                <img src="image/cb2a1c74.jpg" alt="User Avatar">
                 <div class="user-info">
                     <p>User / Student</p>
                     <span>Admin View</span>
+                </div>
             </div>
-            </div>
-        </div>
-        <!-- end sidebar -->
+        </aside>
          <!-- start add -->
- <div class="add">
-
-<div class="mini-form">
-        <h1>Welcome!</h1>
-    <p>from here you can easily add a new expense</p>
-    <div class="text">
- <i class="fa-solid fa-circle-plus"></i>
-        <h3>Add Expense</h3></div>
-        <div class="input-icon">
-        <i class="fa-solid fa-pen"></i>
-
-        <input type="text" placeholder="Expense Name" class="small-input">
-        </div>
-        <div class="input-icon">
-   <i class="fa-solid fa-list-ol"></i>
-
-        <input type="number" placeholder="Amount" class="small-input" >
-        </div>
-        <select class="small-input">
-            <option>Food</option>
-            <option>Transport</option>
-            <option>Shopping</option>
-              <option>add new catagory</option>
-        </select>
-        <div class="input-iconn">
-    <input type="text" placeholder="Enter the category you want"></div>
-        <button class="small-btn">Save</button>
-  </div>
-</div></div>
+<div class="add">
+<!-- Add Expense Form -->
+        <section class="mini-form">
+            <div class="text">
+                <i class="fa-solid fa-circle-plus"></i>
+                <h3>Add Expense</h3>
+            </div>
+            
+            <form>
+                <div class="input-icon">
+                    <i class="fa-solid fa-pen"></i>
+                    <input type="text" placeholder="Expense Name" class="small-input" required>
+                </div>
+                
+                <div class="input-icon">
+                    <i class="fa-solid fa-list-ol"></i>
+                    <input type="number" placeholder="Amount" class="small-input" required>
+                </div>
+                
+                <select class="small-input" required>
+                    <option value="">Select Category</option>
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="custom">Add New Category</option>
+                </select>
+                
+                <div class="input-iconn">
+                    <input type="text" placeholder="Enter the category you want" class="small-input">
+                </div>
+                
+                <button type="submit" class="small-btn">Save</button>
+            </form>
+        </section>
+    </div>
+</div>
 <!-- end add -->
 </body></html>
