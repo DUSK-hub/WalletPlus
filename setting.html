@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setting</title>
-    <!-- Render All Elements Normally -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <!-- Font Awesome Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Main  CSS File -->
+    <title>ExTracker - Settings</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/setting.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
-
-<style>   
-</style>
 </head>
 <body>
-        <div class="content">
-            <!-- start sidebar -->
-                <!-- Sidebar -->
+    <div class="content">
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo">
                 <h2>
@@ -37,15 +32,7 @@
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
-                <a href="expense.html" class="links-nav">
-                    <i class="fa-solid fa-receipt"></i>
-                    <span>Expense</span>
-                </a>
-                <a href="history.html" class="links-nav">
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <span>History</span>
-                </a>
-                <a href="setting.html" class="links-nav">
+                <a href="setting.html" class="links-nav active">
                     <i class="fa-solid fa-gear"></i>
                     <span>Settings</span>
                 </a>
@@ -54,45 +41,191 @@
             <div class="user-profile">
                 <img src="image/cb2a1c74.jpg" alt="User Avatar">
                 <div class="user-info">
-                    <p>User / Student</p>
-                    <span>Admin View</span>
+                    <p id="username-display">Loading...</p>
+                    <span id="role-display">User View</span>
                 </div>
             </div>
         </aside>
-    
-        <!--  start setting -->
-    <div class="Setting">
         
-        <h1>Setting</h1>
-        <div class="text">
-    <div class="textt"> <h4>Account information <p>set your personal information</p> </h4>
-    </div> <h4>update Cards<p>update you cards</p></h4>
+        <!-- Settings Section -->
+        <main class="settings-main">
+            <!-- Header -->
+            <header class="settings-header">
+                <div>
+                    <h1>
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </h1>
+                    <p>Manage your account and preferences</p>
+                </div>
+            </header>
 
-    </div>
+            <!-- Settings Cards Container -->
+            <div class="settings-container">
+                
+                <!-- Account Information Card -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <div>
+                            <h2>
+                                <i class="fa-solid fa-user"></i>
+                                Account Information
+                            </h2>
+                            <p>View your personal information</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="profile-section">
+                            <img src="image/cb2a1c74.jpg" alt="Profile Picture" class="profile-img">
+                            <div class="profile-info">
+                                <h3 id="settings-username">Username</h3>
+                                <span id="settings-role" class="role-badge">User</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>
+                                    <i class="fa-solid fa-user"></i>
+                                    Username
+                                </label>
+                                <p id="display-username">Loading...</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <label>
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    Account Type
+                                </label>
+                                <p id="display-role">Loading...</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <label>
+                                    <i class="fa-solid fa-calendar"></i>
+                                    Member Since
+                                </label>
+                                <p>December 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="name">
-        <img src="image/cb2a1c74.jpg">
-        <div class="username">
-            <label>First Name</label>
-            <input type="text"placeholder="user-name" required >
-            <label>Data of Birth</label>
-            <input type="date">
-            <label>Mobile Number</label>
-            <input type="num" placeholder="numder">
-            <button>Save</button>
-        </div>
-    </div>
-        <div class="pass">
-            <div class="textpass">
-                <h1>Password</h1>
-                <p>set your security pin </p>
+                <!-- Security Card -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <div>
+                            <h2>
+                                <i class="fa-solid fa-lock"></i>
+                                Security
+                            </h2>
+                            <p>Manage your password and security settings</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <form id="password-form" class="security-form">
+                            <div class="form-group">
+                                <label for="current-password">
+                                    <i class="fa-solid fa-key"></i>
+                                    Current Password
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="current-password" 
+                                    name="current-password"
+                                    placeholder="Enter current password"
+                                    minlength="6"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">
+                                    <i class="fa-solid fa-lock"></i>
+                                    New Password
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="new-password" 
+                                    name="new-password"
+                                    placeholder="Enter new password"
+                                    minlength="6"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-password">
+                                    <i class="fa-solid fa-lock"></i>
+                                    Confirm New Password
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="confirm-password" 
+                                    name="confirm-password"
+                                    placeholder="Confirm new password"
+                                    minlength="6"
+                                >
+                            </div>
+                            
+                            <button type="submit" class="btn-update">
+                                <i class="fa-solid fa-rotate"></i>
+                                Update Password
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Danger Zone Card -->
+                <div class="settings-card danger-card">
+                    <div class="card-header">
+                        <div>
+                            <h2>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                Danger Zone
+                            </h2>
+                            <p>Actions that affect your account</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="danger-actions">
+                            <div class="danger-item">
+                                <div>
+                                    <h3>
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        Logout
+                                    </h3>
+                                    <p>Sign out from your account</p>
+                                </div>
+                                <button type="button" class="btn-logout" id="logout-btn">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    Logout
+                                </button>
+                            </div>
+                            
+                            <div class="danger-item">
+                                <div>
+                                    <h3>
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        Delete All Expenses
+                                    </h3>
+                                    <p>Permanently delete all your expense records</p>
+                                </div>
+                                <button type="button" class="btn-danger" id="delete-all-btn">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    Delete All
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <label>Current Password</label>
-            <input type="password" placeholder="enter pass" required minlength="8">
-            <button>update</button>
-        </div>
+        </main>
     </div>
-</div>
-</div>
+
+    <!-- Settings JavaScript -->
+    <script src="js/settings.js"></script>
 </body>
 </html>
