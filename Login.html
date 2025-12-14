@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExTracker - Login</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="css/Login.css">
+
+    <!-- Login JS -->
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Login successful! Redirecting...</span>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Invalid username or password!</span>
+        </div>
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <i class="fa-solid fa-circle-info"></i>
+            <h1>ExTracker</h1>
+            <p>Welcome back! Please login to your account</p>
+        </div>
+
+        <!-- Login Form -->
+        <form class="login-form" id="loginForm">
+            <!-- Username Field -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-user"></i>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        class="form-input" 
+                        placeholder="Enter your username"
+                        required
+                    >
+                </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-input" 
+                        placeholder="Enter your password"
+                        required
+                    >
+                    <button type="button" class="password-toggle" id="togglePassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="login-btn">
+                Sign In
+            </button>
+        </form>
+
+        <!-- Footer Links -->
+        <div class="form-footer">
+            Don't have an account? <a href="register.html">Sign Up</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExTracker - Expense Dashboard</title>
     
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
@@ -17,13 +14,10 @@
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/index.css">
-
-
-
 </head>
 <body>
     <!-- JavaScript -->
-    <script src="JS/script.js" defer></script>
+    <script src="js/script.js" defer></script>
     <div class="content">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -39,14 +33,6 @@
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
-                <a href="expense.html" class="links-nav">
-                    <i class="fa-solid fa-receipt"></i>
-                    <span>Expense</span>
-                </a>
-                <a href="history.html" class="links-nav">
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <span>History</span>
-                </a>
                 <a href="setting.html" class="links-nav">
                     <i class="fa-solid fa-gear"></i>
                     <span>Settings</span>
@@ -56,8 +42,8 @@
             <div class="user-profile">
                 <img src="image/cb2a1c74.jpg" alt="User Avatar">
                 <div class="user-info">
-                    <p>User / Student</p>
-                    <span>Admin View</span>
+                    <p id="username-display">Loading...</p>
+                    <span id="role-display">User View</span>
                 </div>
             </div>
         </aside>
@@ -77,21 +63,13 @@
                 </div>
             </header>
             
-            <!-- Stats Cards -->
+            <!-- Stats Card (Only Total Expenses) -->
             <section class="stats-cards">
-                <div class="card">
-                    <h5>Available Budget</h5>
-                    <p>0 EGP</p>
-                    <div class="line-green">
-                        <span></span>
-                    </div>
-                </div>
-                
-                <div class="card">
+                <div class="card expense-card">
                     <h5>Total Expenses</h5>
-                    <p>0 EGP</p>
+                    <p id="total-expenses">0 EGP</p>
                     <div class="line-red">
-                        <span></span>
+                        <span id="expense-bar"></span>
                     </div>
                 </div>
             </section>
@@ -100,12 +78,12 @@
             <section class="analysis-section">
                 <div class="analysis-card">
                     <h3>Expense Analysis</h3>
-                    <div class="pie-chart"></div>
+                    <div class="pie-chart" id="pie-chart"></div>
                     <div class="point">
-                        <p class="green">Food</p>
-                        <p class="blue">Transport</p>
                         <p class="red">Shopping</p>
-                        <p class="gray">Other Category</p>
+                        <p class="blue">Transport</p>
+                        <p class="green">Food</p>
+                        <p class="gray">Others</p>
                     </div>
                 </div>
             </section>
@@ -128,7 +106,7 @@
                             <span>Amount</span>
                         </div>
                         <div class="status">
-                            <span>Status</span>
+                            <span>Action</span>
                         </div>
                     </div>
                 </section>
@@ -140,28 +118,24 @@
                         <h3>Add Expense</h3>
                     </div>
                     
-                    <form>
+                    <form id="expense-form">
                         <div class="input-icon">
                             <i class="fa-solid fa-pen"></i>
-                            <input type="text" placeholder="Expense Name" class="small-input" required>
+                            <input type="text" name="expense_name" placeholder="Expense Name" class="small-input" required>
                         </div>
                         
                         <div class="input-icon">
                             <i class="fa-solid fa-list-ol"></i>
-                            <input type="number" placeholder="Amount" class="small-input" required>
+                            <input type="number" name="amount" placeholder="Amount" class="small-input" step="0.01" min="0.01" required>
                         </div>
                         
-                        <select class="small-input" required>
+                        <select name="category" class="small-input" required>
                             <option value="">Select Category</option>
-                            <option value="food">Food</option>
-                            <option value="transport">Transport</option>
-                            <option value="shopping">Shopping</option>
-                            <option value="custom">Add New Category</option>
+                            <option value="Food">Food</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Others">Others</option>
                         </select>
-                        
-                        <div class="input-iconn">
-                            <input type="text" placeholder="Enter the category you want" class="small-input">
-                        </div>
                         
                         <button type="submit" class="small-btn">Save</button>
                     </form>
